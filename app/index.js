@@ -1,5 +1,4 @@
 // Styles
-import 'styles/font.scss';
 import 'styles/index.scss';
 
 // Libs
@@ -12,18 +11,12 @@ function drawPattern() {
     const pattern = Trianglify({
         width: window.innerWidth,
         height: window.innerHeight,
-        x_colors: 'Spectral',
-        cell_size: 75
+        x_colors: 'PuOr',
+        cell_size: 40
     });
-
-    // const svg = pattern.svg();
-    // const serializedSVG = new XMLSerializer().serializeToString(svg);
-
-    // console.log('svg', svg);
 
     canvasWrapper.innerHTML = '';
     canvasWrapper.appendChild(pattern.canvas());
-    // canvasWrapper.style.background = `url(data:image/svg+xml;utf8,${serializedSVG})`;
 }
 
 window.addEventListener('resize', debounce(() => {

@@ -17,6 +17,14 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    font-weight: 200;
+    color: #908f8f;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 200;
 }
 
 #trianglify-wrapper {
@@ -43,10 +51,19 @@ body {
 
 .title {
     h2 {
-        font-size: 24px;
-        font-weight: 200;
-        letter-spacing: 2px;
-        color: #4d4d4d;
-        //margin: 40px 0 20px 0;
+        font-size: 48px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.contact {
+    margin-top: 10px;
+
+    a {
+        display: inline-block;
+        margin-left: 5px;
+        text-decoration: none;
+        color: #5b86e5;
     }
 }

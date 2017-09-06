@@ -6,13 +6,18 @@
     <meta property="og:title" content="Coming Soon"/>
     <meta property="og:site_name" content="Coming Soon"/>
     <meta property="og:type" content="blog"/>
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body ontouchstart="">
     <div id="trianglify-wrapper"></div>
     <div id="content-wrapper" class="content">
         <div class="title">
-            <h2>Coming Soon</h2>
+            <h2><%= htmlWebpackPlugin.options.title %></h2>
+        </div>
+        <div class="contact">
+            <span>contact</span>
+            <a id="contact-mail" href="mailto:someone@example.com" target="_top">someone@example.com</a>
         </div>
     </div>
 </body>
