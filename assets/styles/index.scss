@@ -37,8 +37,8 @@ h2 {
 
 .content {
     display: flex;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     text-align: center;
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05);
@@ -65,5 +65,12 @@ h2 {
         margin-left: 5px;
         text-decoration: none;
         color: #5b86e5;
+    }
+}
+
+@media only screen and (min-width:961px)  {
+    .content {
+        width: 400px;
+        height: 400px;
     }
 }
