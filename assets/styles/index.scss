@@ -47,6 +47,11 @@ h2 {
     align-items: center;
     border-radius: 50%;
     z-index: 9;
+    transition: box-shadow 500ms;
+
+    &:hover {
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+    }
 }
 
 .title {
@@ -64,7 +69,12 @@ h2 {
         display: inline-block;
         margin-left: 5px;
         text-decoration: none;
-        color: #5b86e5;
+        color: #998ec3;
+        transition: color 500ms;
+
+        &:hover {
+            color: #b78ea0;
+        }
     }
 }
 

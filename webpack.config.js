@@ -9,7 +9,11 @@ const dirNode = 'node_modules';
 const dirApp = path.join(__dirname, 'app');
 const dirAssets = path.join(__dirname, 'assets');
 
-const appHtmlTitle = 'website.com';
+// EDIT CONFIG HERE
+const APP_HTML_TITLE = 'website.com';
+const APP_CONTACT_MAIL = 'someone@example.com';
+
+const contactMail = Buffer.from(APP_CONTACT_MAIL).toString('base64');
 
 /**
  * Webpack Configuration
@@ -27,12 +31,13 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            IS_DEV: IS_DEV
+            CONTACT_MAIL: JSON.stringify(contactMail),
+            IS_DEV
         }),
 
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'index.ejs'),
-            title: appHtmlTitle,
+            title: APP_HTML_TITLE,
             minify: {
                 collapseWhitespace: true
             }
