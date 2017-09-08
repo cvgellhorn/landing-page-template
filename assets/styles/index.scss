@@ -22,13 +22,10 @@ body {
     color: #908f8f;
 }
 
-h2 {
-    font-size: 24px;
-    font-weight: 200;
-}
-
 #trianglify-wrapper {
     position: absolute;
+    left: 0;
+    top: 0;
 
     canvas {
         display: block;
@@ -37,10 +34,10 @@ h2 {
 
 .content {
     display: flex;
-    width: 350px;
-    height: 350px;
+    width: 310px;
+    height: 310px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05);
     flex-direction: column;
     justify-content: center;
@@ -56,7 +53,8 @@ h2 {
 
 .title {
     h2 {
-        font-size: 48px;
+        font-size: 32px;
+        font-weight: 200;
         margin: 0;
         padding: 0;
     }
@@ -82,5 +80,10 @@ h2 {
     .content {
         width: 400px;
         height: 400px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .title h2 {
+        font-size: 40px;
     }
 }
