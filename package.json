@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "debounce": "^1.0.2",
+    "mail-redactor": "^1.0.3",
     "trianglify": "^1.1.0"
   },
   "devDependencies": {
@@ -27,7 +28,7 @@
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.2",
-    "webpack": "^2.6.1",
+    "webpack": "^3.5.6",
     "webpack-dev-server": "^2.4.5"
   }
 }
