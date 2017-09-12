@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // Is the current build a development build
 const IS_DEV = (process.env.NODE_ENV === 'dev');
@@ -41,7 +42,9 @@ module.exports = {
             minify: {
                 collapseWhitespace: true
             }
-        })
+        }),
+
+        new ExtractTextPlugin('styles.[hash].css')
     ],
     module: {
         rules: [
@@ -59,37 +62,41 @@ module.exports = {
             // STYLES
             {
                 test: /\.css$/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: IS_DEV
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                sourceMap: IS_DEV
+                            }
                         }
-                    },
-                ]
+                    ]
+                })
             },
 
             // CSS / SASS
             {
                 test: /\.scss/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: IS_DEV
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                sourceMap: IS_DEV
+                            }
+                        },
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: IS_DEV,
+                                includePaths: [dirAssets]
+                            }
                         }
-                    },
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            sourceMap: IS_DEV,
-                            includePaths: [dirAssets]
-                        }
-                    }
-                ]
-            }
+                    ]
+                })
+            },
         ]
     }
 };
