@@ -7,7 +7,7 @@
   "homepage": "https://github.com/cvgellhorn/landing-page-template",
   "scripts": {
     "dev": "NODE_ENV=dev webpack-dev-server --progress --config webpack.config.dev.js",
-    "build": "webpack -p --progress --config webpack.config.build.js"
+    "build": "WEBSITE=example.com webpack -p --progress --config webpack.config.build.js"
   },
   "repository": {
     "type": "git",
