@@ -5,14 +5,15 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // Is the current build a development build
 const IS_DEV = (process.env.NODE_ENV === 'dev');
+const WEBSITE = process.env.WEBSITE || 'example.com';
 
 const dirNode = 'node_modules';
 const dirApp = path.join(__dirname, 'app');
 const dirAssets = path.join(__dirname, 'assets');
 
 // EDIT CONFIG HERE
-const APP_HTML_TITLE = 'website.com';
-const APP_CONTACT_MAIL = 'someone@example.com';
+const APP_HTML_TITLE = WEBSITE;
+const APP_CONTACT_MAIL = `contact@${WEBSITE}`;
 
 const contactMail = Buffer.from(APP_CONTACT_MAIL).toString('base64');
 
@@ -52,7 +53,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
-                exclude: /(node_modules)/,
+                exclude: /node_modules\/(?!(mail-redactor)\/).*/,
                 options: {
                     compact: true
                 }
