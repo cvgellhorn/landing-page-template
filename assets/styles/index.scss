@@ -19,7 +19,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
     font-weight: 200;
-    color: #908f8f;
+    color: #ffffff;
 }
 
 #trianglify-wrapper {
@@ -37,8 +37,8 @@ body {
     width: 310px;
     height: 310px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -47,7 +47,7 @@ body {
     transition: box-shadow 500ms;
 
     &:hover {
-        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -67,11 +67,10 @@ body {
         display: inline-block;
         margin-left: 5px;
         text-decoration: none;
-        color: #998ec3;
-        transition: color 500ms;
+        color: #a8cee7;
 
         &:hover {
-            color: #b78ea0;
+            text-decoration: underline;
         }
     }
 }
@@ -80,7 +79,7 @@ body {
     .content {
         width: 400px;
         height: 400px;
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(0, 0, 0, 0.5);
     }
 
     .title h2 {
