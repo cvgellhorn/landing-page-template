@@ -2,7 +2,7 @@ Landing Page Template
 ===========
 > A simple landing page template
 
-![screenshot](screen.png)
+![screenshot](screenshot.jpeg)
 
 # Development
 Run the local webpack-dev-server with livereload and autocompile on [http://localhost:8080/](http://localhost:8080/)
