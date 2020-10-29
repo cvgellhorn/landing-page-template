@@ -1,6 +1,6 @@
 Landing Page Template
 ===========
-> A simple landing page template
+> A simple landing page template with build in email protection
 
 ![screenshot](screenshot.jpeg)
 
