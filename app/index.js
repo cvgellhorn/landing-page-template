@@ -20,8 +20,8 @@ function drawPattern() {
     const pattern = Trianglify({
         width: window.innerWidth,
         height: window.innerHeight,
-        x_colors: 'PuOr',
-        cell_size: 40
+        x_colors: 'Blues',
+        cell_size: 80
     });
 
     canvasWrapper.innerHTML = '';
