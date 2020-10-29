@@ -16,7 +16,5 @@ $ npm run build
 ```
 ## Contact Email
 You can insert your own email by adding a secret in your repository settings
-<b>Name</b>
-`CONTACT_EMAIL`
-<b>Value</b>
-`contact@yourwebsite.com`
+- <b>Name</b> `CONTACT_EMAIL`
+- <b>Value</b> `contact@yourwebsite.com`
