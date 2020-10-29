@@ -6,14 +6,19 @@ import debounce from 'debounce';
 import Trianglify from 'trianglify';
 import mailRedactor from 'mail-redactor';
 
-const canvasWrapper = document.getElementById('trianglify-wrapper');
+const elCanvasWrapper = document.getElementById('trianglify-wrapper');
+const elTitleHeader = document.getElementById('title-header');
+const elEmail = document.getElementById('contact-mail');
 
 function addContactMail(address) {
     const mail = atob(address);
-    const linkNode = document.getElementById('contact-mail');
 
-    linkNode.href = `mailto:${mail}`;
-    linkNode.innerHTML = mailRedactor(mail);
+    elEmail.href = `mailto:${mail}`;
+    elEmail.innerHTML = mailRedactor(mail);
+}
+
+function updateTitle() {
+    elTitleHeader.innerHTML = document.title = window.location.hostname;
 }
 
 function drawPattern() {
@@ -24,13 +29,14 @@ function drawPattern() {
         cell_size: 80
     });
 
-    canvasWrapper.innerHTML = '';
-    canvasWrapper.appendChild(pattern.canvas());
+    elCanvasWrapper.innerHTML = '';
+    elCanvasWrapper.appendChild(pattern.canvas());
 }
 
 window.addEventListener('resize', debounce(() => {
     drawPattern();
 }));
 
+updateTitle();
 addContactMail(CONTACT_MAIL);
 drawPattern();
